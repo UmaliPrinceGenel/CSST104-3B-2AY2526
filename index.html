@@ -1,0 +1,267 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Umali</title>
+    <link rel="stylesheet" href="./output.css" />
+    <link rel="stylesheet" href="./input.css" />
+    <link rel="shortcut icon" href="./assets/favicon.ico" type="image/x-icon" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Ovo&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body class="font-Outfit leading-8 dark:bg-darkTheme dark:text-white">
+    <div
+      class="fixed top-0 right-0 w-11/12 -z-10 translate-y-[-80%] dark:hidden"
+    >
+      <img src="./assets/header-bg-color.png" alt="" class="w-full" />
+    </div>
+
+    <nav
+      id="navbar"
+      class="w-full fixed px-5 lg:px-8 xl:px-[8%] py-4 flex items-center justify-between z-50"
+    >
+      <p
+        class="bg-white bg-opacity-50 backdrop-blur-lg shadow-sm dark:bg-darkTheme dark:shadow-white/20 sr-only"
+      >
+        Hidden
+      </p>
+      <a href="#!">
+        <h1
+          class="text-2xl font-bold dark:text-white"
+          style="font-size: 3.5vh; font-weight: bolder"
+        >
+          Umali
+        </h1>
+      </a>
+
+      <ul
+        id="navLink"
+        class="hidden md:flex items-center gap-6 lg:gap-8 rounded-full px-12 py-3 bg-white shadow-sm bg-opacity-50 font-Ovo dark:border dark:border-white/30 dark:bg-transparent"
+      >
+        <li>
+          <a
+            class="hover:text-gray-500 dark:hover:text-gray-300 transition"
+            href="#top"
+            >Home</a
+          >
+        </li>
+        <li>
+          <a
+            class="hover:text-gray-500 dark:hover:text-gray-300 transition"
+            href="#about"
+            >Subject</a
+          >
+        </li>
+        <li>
+          <a
+            class="hover:text-gray-500 dark:hover:text-gray-300 transition"
+            href="#lab"
+            >Lab Activities</a
+          >
+        </li>
+      </ul>
+
+      <div class="flex items-center gap-4">
+        <button onclick="toggleTheme()">
+          <img src="./assets/moon_icon.png" alt="" class="w-5 dark:hidden" />
+          <img
+            src="./assets/sun_icon.png"
+            alt=""
+            class="w-5 hidden dark:block"
+          />
+        </button>
+        <button class="block md:hidden ml-3" onclick="openMenu()">
+          <img src="./assets/menu-black.png" alt="" class="w-6 dark:hidden" />
+          <img
+            src="./assets/menu-white.png"
+            alt=""
+            class="w-6 hidden dark:block"
+          />
+        </button>
+      </div>
+      <!-- ----- mobile menu ------ -->
+      <ul
+        id="mobileMenu"
+        class="flex md:hidden flex-col gap-4 py-20 px-10 fixed -right-64 top-0 bottom-0 w-64 z-50 h-screen bg-rose-50 transition duration-500 font-Ovo dark:bg-darkHover dark:text-white"
+      >
+        <div class="absolute right-6 top-6" onclick="closeMenu()">
+          <img
+            src="./assets/close-black.png"
+            alt=""
+            class="w-5 cursor-pointer dark:hidden"
+          />
+          <img
+            src="./assets/close-white.png"
+            alt=""
+            class="w-5 cursor-pointer hidden dark:block"
+          />
+        </div>
+
+        <li><a href="#top" onclick="closeMenu()">Home</a></li>
+        <li><a href="#about" onclick="closeMenu()">Subject</a></li>
+        <li><a href="#work" onclick="closeMenu()">Lab Activities</a></li>
+      </ul>
+    </nav>
+
+    <!-- ----- home section ------ -->
+    <div
+      class="w-11/12 max-w-3xl text-center mx-auto h-screen flex flex-col items-center justify-center gap-4"
+    >
+      <img src="./assets/genel.jpg" alt="" class="rounded-full w-32" />
+      <h3 class="flex items-end gap-2 text-xl md:text-2xl mb-3 font-Ovo">
+        Prince Genel R. Umali
+      </h3>
+
+      <h1 class="text-3xl sm:text-6xl lg:text-[66px] font-Ovo">CSST104</h1>
+      <h2 class="text-lg md:text-2xl font-Ovo">
+        Laguna State Polytechnic University - Sta. Cruz Campus
+      </h2>
+      <div class="flex flex-col sm:flex-row items-center gap-4 mt-4">
+        <a
+          href="#lab"
+          class="px-10 py-2.5 border rounded-full bg-gradient-to-r from-[#b820e6] to-[#da7d20] text-white flex items-center gap-2 dark:border-transparent"
+        >
+          Lab activities
+          <img src="./assets/right-arrow-white.png" alt="" class="w-4" />
+        </a>
+      </div>
+    </div>
+
+    <!-- ----- Subject ------ -->
+    <div id="about" class="w-full px-[12%] py-10 scroll-mt-20">
+      <h4 class="text-center mb-2 text-lg font-Ovo">CSST104</h4>
+      <h2 class="text-center text-5xl font-Ovo">Advance Machine Learning</h2>
+      <div class="flex w-full flex-col lg:flex-row items-center gap-20 my-20">
+        <div class="max-w-max mx-auto relative">
+          <img
+            src="./assets/mlpic2.jpg"
+            alt=""
+            class="w-64 sm:w-80 rounded-3xl max-w-none"
+          />
+        </div>
+        <div class="flex-1">
+          <p class="mb-10 max-w-2xl font-Ovo">
+            Advanced Machine Learning involves sophisticated techniques like
+            deep learning, reinforcement learning, and ensemble methods to
+            analyze complex patterns and large datasets, improving performance
+            beyond traditional algorithms.
+          </p>
+          <ul class="grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-2xl">
+            <li
+              class="border border-gray-300 dark:border-white/30 rounded-xl p-6 cursor-pointer hover:bg-lightHover hover:-translate-y-1 duration-500 hover:shadow-black dark:hover:shadow-white/80 dark:hover:bg-darkHover/50"
+            >
+              <img
+                src="./assets/code-icon.png"
+                alt=""
+                class="w-7 mt-3 dark:hidden"
+              /><img
+                src="./assets/code-icon-dark.png"
+                alt=""
+                class="w-7 mt-3 hidden dark:block"
+              />
+              <h3 class="my-4 font-semibold text-gray-700 dark:text-white">
+                Deep Learning
+              </h3>
+              <p class="text-gray-600 text-sm dark:text-white/80">
+                Neural networks, CNNs, RNNs, Transformers
+              </p>
+            </li>
+            <li
+              class="border border-gray-300 dark:border-white/30 rounded-xl p-6 cursor-pointer hover:bg-lightHover hover:-translate-y-1 duration-500 hover:shadow-black dark:hover:shadow-white/80 dark:hover:bg-darkHover/50"
+            >
+              <img
+                src="./assets/edu-icon.png"
+                alt=""
+                class="w-7 mt-3 dark:hidden"
+              /><img
+                src="./assets/edu-icon-dark.png"
+                alt=""
+                class="w-7 mt-3 hidden dark:block"
+              />
+              <h3 class="my-4 font-semibold text-gray-700 dark:text-white">
+                ML Models
+              </h3>
+              <p class="text-gray-600 text-sm dark:text-white/80">
+                Supervised, Semi - Supervised, Unsupervised, Reinforcement
+                Learning
+              </p>
+            </li>
+            <li
+              class="border border-gray-300 dark:border-white/30 rounded-xl p-6 cursor-pointer hover:bg-lightHover hover:-translate-y-1 duration-500 hover:shadow-black dark:hover:shadow-white/80 dark:hover:bg-darkHover/50"
+            >
+              <img
+                src="./assets/project-icon.png"
+                alt=""
+                class="w-7 mt-3 dark:hidden"
+              /><img
+                src="./assets/project-icon-dark.png"
+                alt=""
+                class="w-7 mt-3 hidden dark:block"
+              />
+              <h3 class="my-4 font-semibold text-gray-700 dark:text-white">
+                AI Applications
+              </h3>
+              <p class="text-gray-600 text-sm dark:text-white/80">
+                Computer Vision, NLP, Predictive Analytics
+              </p>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Lab Activities -->
+    <div id="lab" class="w-full px-[12%] py-10 scroll-mt-20">
+      <h2 class="text-center text-5xl font-Ovo mb-10">Lab Activities</h2>
+      <div class="max-w-3xl mx-auto">
+
+
+        <div
+          class="border border-gray-300 dark:border-white/30 rounded-xl p-6 mb-6"
+        >
+          <h3 class="font-semibold text-gray-700 dark:text-white">
+            Activity 1: Template
+          </h3>
+          <p class="text-gray-600 dark:text-white/80">
+            Description: Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti, labore animi? Nostrum ducimus labore sed debitis, possimus iure architecto suscipit vitae, dolorum incidunt expedita, nihil recusandae. Reiciendis numquam facilis consectetur!
+          </p>
+          <p class="text-gray-500 text-sm dark:text-white/60">
+            Date: January 15, 2026
+          </p>
+          <a
+            href="#!"
+            class="text-[#b820e6] hover:underline dark:text-[#da7d20]"
+            >View Activity</a>
+        </div>
+
+
+
+
+      </div>
+    </div>
+    <!-- Footer -->
+    <div class="mt-20">
+      <div
+        class="text-center sm:flex items-center justify-between border-t border-gray-400 mx-[10%] mt-12 py-3"
+      >
+        <p>
+          © 2026
+          <a href="#" target="_blank">Prince Genel Umali</a>. BSCS-3B
+
+        </p>
+        <ul class="flex items-center gap-10 justify-center mt-4 sm:mt-0">
+          <li><a target="_blank" href="https://github.com/UmaliPrinceGenel">GitHub</a></li>
+          <li><a target="_blank" href="www.linkedin.com/in/umali-prince-genel-r-66a60637b">LinkedIn</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
