@@ -1,9 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
-  if (localStorage.theme === "dark") {
-    document.documentElement.classList.add("dark");
-  } else {
-    document.documentElement.classList.remove("dark");
-  }
+  document.documentElement.classList.remove("dark");
+  localStorage.theme = "light";
 });
 const navbar = document.getElementById("navbar");
 const navLink = document.getElementById("navLink");
